@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+	
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script src="plugins/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+	<script>
+		tinymce.init({
+			selector: 'textarea',
+			plugins: 'code',
+			external_plugins: {
+				'formula': "../../plugins/tinymce6-formula-master/dist/plugin.min.js",
+				'mathjax': "../../plugins/tinymce-mathjax-master/plugin.min.js"
+			},
+			toolbar: 'formula code mathjax',
+			mathjax: {
+				lib: "plugins/MathJax-master/es5/tex-mml-chtml.js",
+			}
+		});
+	</script>
+</head>
+<body>
+	<textarea class="form-control" name="question" rows="12">
+		</textarea>
+</body>
+</html>
