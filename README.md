@@ -1,16 +1,16 @@
 # Tinymce-mathjax-formula-editor
 
-- Must  run the file from a Local Web Server like WAMP, XAMPP, etc
-- tinymce6-formula-master was modified to not convert the formula to image but leave it as LaTex because the image quality was not clear enough
-- tinymce-mathjax-master helps to show the LaTex properly in the editor and also allows editing of the inserted formula by clicking on it.
-- MathJax must be added to the page where the code will be viewed. Cdn was used in the demo.
-- The only file used from MathJax-master folder was only used to add "tex-mml-chtml.js" to the tinymce editor "library" like below
+- The file must be run from a local web server such as WAMP, XAMPP, or similar.  
+- The `tinymce6-formula-master` plugin has been modified to retain formulas in LaTeX format instead of converting them to images due to concerns about image quality.  
+- The `tinymce-mathjax-master` plugin ensures proper rendering of LaTeX in the editor and enables editing of inserted formulas by clicking on them.  
+- MathJax must be included on the page where the content will be displayed. In the demo, a CDN was used for this purpose.  
+- From the `MathJax-master` folder, only the file `tex-mml-chtml.js` is utilized. This file is added to the TinyMCE editor's "library" configuration as shown below:  
 	```javascript
 	mathjax: {
 		lib: "plugins/MathJax-master/es5/tex-mml-chtml.js",
 	}
 	```
-- Remove 'mathjax' from the below code if you want to remove 'Equation' from tinymce toolbar. This is for tinymce-mathjax-master and is not needed in the tinymce toolbar.
+- Remove 'mathjax' from the code below if you want to exclude the 'Equation' option from the TinyMCE toolbar. Note that this feature is part of the `tinymce-mathjax-master` plugin and removing it will not stop the plugin from working
 	```javascript
 	toolbar: 'formula code mathjax'
 	```
@@ -18,5 +18,5 @@
 
 ## CREDIT
 
-https://github.com/dimakorotkov/tinymce-mathjax
-https://github.com/umar221b/tinymce6-formula
+- https://github.com/dimakorotkov/tinymce-mathjax
+- https://github.com/umar221b/tinymce6-formula
