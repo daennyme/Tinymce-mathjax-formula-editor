@@ -1,5 +1,6 @@
 # Tinymce-mathjax-formula-editor
 
+- Extract the `plugins.zip` to the same directory as `index.html`. It contains `tinymce`, `mathjax`, modified `tinymce6-formula-master` and `tinymce-mathjax-master`
 - The file must be run from a local web server such as WAMP, XAMPP, or similar.  
 - The `tinymce6-formula-master` plugin has been modified to retain formulas in LaTeX format instead of converting them to images due to concerns about image quality.  
 - The `tinymce-mathjax-master` plugin ensures proper rendering of LaTeX in the editor and enables editing of inserted formulas by clicking on them.  
@@ -10,7 +11,7 @@
 		lib: "plugins/MathJax-master/es5/tex-mml-chtml.js",
 	}
 	```
-- Remove 'mathjax' from the code below if you want to exclude the 'Equation' option from the TinyMCE toolbar. Note that this feature is part of the `tinymce-mathjax-master` plugin and removing it will not stop the plugin from working
+- Remove `mathjax` from the code below to exclude the `Equation` option from the TinyMCE toolbar. Note that this feature is part of the `tinymce-mathjax-master` plugin and removing it will not stop the plugin from working
 	```javascript
 	toolbar: 'formula code mathjax'
 	```
